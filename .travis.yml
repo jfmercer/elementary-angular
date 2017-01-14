@@ -20,4 +20,12 @@ before_install:
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
 
-script: ng test --watch false
+script: ng test --watch false --code-coverage true
+
+addons:
+  code_climate:
+    repo_token: $CODE_CLIMATE_COVERAGE
+
+after_success:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/coverage.lcov
