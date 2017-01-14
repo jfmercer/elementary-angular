@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jfmercer/elementary-angular.svg?branch=master)](https://travis-ci.org/jfmercer/elementary-angular)
+[![Build Status](https://travis-ci.org/jfmercer/elementary-angular.svg?branch=master)](https://travis-ci.org/jfmercer/elementary-angular) [![dependencies Status](https://david-dm.org/jfmercer/elementary-angular/status.svg)](https://david-dm.org/jfmercer/elementary-angular) [![devDependencies Status](https://david-dm.org/jfmercer/elementary-angular/dev-status.svg)](https://david-dm.org/jfmercer/elementary-angular?type=dev) [![MIT License](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 # elementary-angular
 
