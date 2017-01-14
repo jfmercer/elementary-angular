@@ -20,7 +20,9 @@ before_install:
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
 
-script: ng test --watch false --code-coverage true
+script:
+  - ng test --watch false --code-coverage true
+  - ng build --prod
 
 addons:
   code_climate:
