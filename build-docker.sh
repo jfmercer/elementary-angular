@@ -19,11 +19,11 @@ docker run --rm --entrypoint cat elementary-angular:latest /tmp/yarn.lock > /tmp
 
 # If the lock files differ, then save the images's yarn cache locally
 # and save new yarn.lock locally
-# if ! diff -q yarn.lock /tmp/yarn.lock > /dev/null 2>&1; then
-#   # Compress image .yarn-cache and save to local repo
-#   echo "Saving Yarn cache"
-#   docker run --rm --entrypoint tar elementary-angular:latest czf - /root/.cache/yarn > .yarn-cache.tgz
-#   # Save new yarn.lock to local repo
-#   echo "Saving yarn.lock"
-#   cp /tmp/yarn.lock yarn.lock
-# fi
+if ! diff -q yarn.lock /tmp/yarn.lock > /dev/null 2>&1; then
+  # Compress image .yarn-cache and save to local repo
+  # echo "Saving Yarn cache"
+  # docker run --rm --entrypoint tar elementary-angular:latest czf - /root/.cache/yarn > .yarn-cache.tgz
+  # Save new yarn.lock to local repo
+  echo "Saving yarn.lock"
+  cp /tmp/yarn.lock yarn.lock
+fi
