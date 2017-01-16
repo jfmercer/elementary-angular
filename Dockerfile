@@ -1,5 +1,5 @@
 # jfmercer/yarn is simply the latest node 7 image with yarn installed
-FROM jfmercer/yarn:latest
+FROM jfmercer/yarn:7.4.0
 
 MAINTAINER John F. Mercer <john.f.mercer@gmail.com>
 
@@ -17,4 +17,4 @@ RUN cd /tmp && yarn install; \
 
 # Change directory so that our commands run inside this new directory
 WORKDIR /opt/app
-COPY . /opt/app
+# COPY . /opt/app

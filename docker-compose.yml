@@ -7,5 +7,6 @@ services:
       - "4200:4200" # dev server
       - "9876:9876" # karma server
     volumes:
-      - /opt/app/node_modules
+      - .:/opt/app
+      - /tmp/node_modules
       - /root/.cache/yarn
