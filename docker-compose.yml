@@ -10,17 +10,23 @@ volumes:
 services:
   dev:
     build: . # specify the directory of the Dockerfile
+    container_name: dev
+    command: "npm start"
     ports:
       - "4200:4200" # dev server
     volumes:
       - .:/opt/app
       - node_modules:/tmp/node_modules
       - yarn_cache:/root/.cache/yarn
-  karma:
-    build: . # specify the directory of the Dockerfile
-    ports:
-      - "9876:9876" # karma server
-    volumes:
-      - .:/opt/app
-      - node_modules:/tmp/node_modules
-      - yarn_cache:/root/.cache/yarn
+
+# TODO: Configure karma to run from within Docker
+
+  # karma:
+  #   build: . # specify the directory of the Dockerfile
+  #   command: "ng test"
+  #   ports:
+  #     - "9876:9876" # karma server
+  #   volumes:
+  #     - .:/opt/app
+  #     - node_modules:/tmp/node_modules
+  #     - yarn_cache:/root/.cache/yarn
