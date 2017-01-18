@@ -36,7 +36,7 @@ RUN cd /tmp && yarn install; \
     mkdir -p /opt/app && cd /opt/app && ln -s /tmp/node_modules
 
 ENV DISPLAY :99
-ENV CHROME_BIN /usr/bin/chromium
+ENV CHROME_BIN /usr/bin/google-chrome
 
 # Change directory so that our commands run inside this new directory
 WORKDIR /opt/app
