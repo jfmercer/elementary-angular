@@ -1,6 +1,6 @@
 import { ElementaryAngularPage } from './app.po';
 
-describe('elementary-angular App', function() {
+describe('elementary-angular App', () => {
   let page: ElementaryAngularPage;
 
   beforeEach(() => {
